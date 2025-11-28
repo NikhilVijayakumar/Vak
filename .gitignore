@@ -211,3 +211,6 @@ __marimo__/
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/Vak.iml
+/.idea/.gitignore
+/.idea/vcs.xml
+/output.txt

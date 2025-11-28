@@ -1,6 +1,6 @@
 llm:
   creative:
-    default: phi
+    default: gpt
     models:
       phi:
         base_url: "http://localhost:1234/v1"
@@ -10,8 +10,12 @@ llm:
         base_url: "http://localhost:1234/v1"
         model: "lm_studio/meta-llama-3.1-8b-instruct"
         api_key: ""
+      gpt:
+        base_url: "http://localhost:1234/v1"
+        model: "lm_studio/openai/gpt-oss-20b"
+        api_key: "lm_studio"
   evaluation:
-    default: gemma
+    default: gpt
     models:
       gemma:
         base_url: "http://localhost:1234/v1"
@@ -21,6 +25,10 @@ llm:
         base_url: "http://localhost:1234/v1"
         model: "lm_studio/qwen3-14b"
         api_key: "xxxx"
+      gpt:
+        base_url: "http://localhost:1234/v1"
+        model: "lm_studio/openai/gpt-oss-20b"
+        api_key: "lm_studio"
 
 
 llm_parameters:

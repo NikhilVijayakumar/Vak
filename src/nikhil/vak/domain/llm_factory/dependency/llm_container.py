@@ -27,3 +27,7 @@ class LLMContainer(containers.DeclarativeContainer):
         LLMBuilder,
         settings=llm_settings,
     )
+
+    creative_llm = llm_builder.provided.build_creative.call()
+
+    evaluation_llm = llm_builder.provided.build_evaluation.call()
