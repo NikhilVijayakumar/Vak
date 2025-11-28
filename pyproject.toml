@@ -1,11 +1,11 @@
 [project]
 name = "Vak"
-version = "1.0.0"
+version = "1.0.1"
 description = "Vak is a common configuration and CrewAI helper library designed to be used as a dependency in other projects. It provides a structured way to manage LLM configurations and build LLM instances using dependency injection."
 dependencies = [
-    "PyYAML ==6.0.2",
-    "crewai ==0.201.1",
-    "crewai-tools ==0.75.0",
+    "PyYAML ==6.0.3",
+    "crewai == 1.6.0",
+    "crewai-tools == 1.6.0",
     "dependency-injector == 4.48.2"
 ]
 
