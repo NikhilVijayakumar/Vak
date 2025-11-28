@@ -34,6 +34,19 @@ You can install Vak locally for development:
 pip install -e .
 ```
 
+
+## Core Advantage: Simplified LLM Configuration
+
+Vak's primary strength lies in its ability to abstract complex LLM setups into a simple, readable YAML configuration file. This approach offers several key benefits:
+
+-   **Unified Configuration**: Manage all your LLM settings in one place. Whether you're using open-source models (via Ollama, LM Studio), proprietary models (Gemini, Azure OpenAI), or routing services (OpenRouter), Vak handles them all through a consistent interface. All models are treated as OpenAI-compatible, simplifying integration.
+-   **Purpose-Driven Profiles**: Vak distinguishes between two primary operational modes:
+    -   **Creative**: Optimized for generation tasks where variability and creativity are desired (higher temperature).
+    -   **Evaluation**: Tuned for deterministic and analytical tasks (lower temperature, consistent output).
+-   **Out-of-the-Box Hyperparameters**: Sensible defaults for hyperparameters (temperature, top_p, etc.) are provided for both profiles, but can be easily overridden in the config file.
+-   **Flexible Model Selection**: You can configure the same underlying model for both creative and evaluation tasks, or use entirely different models (e.g., a large model for creation and a smaller, faster one for evaluation).
+-   **Dependency Injection**: The entire system is built on a robust Dependency Injection (DI) framework, making it easy to swap implementations, mock for testing, and manage lifecycles.
+
 ## Usage
 
 ### LLM Factory
@@ -71,6 +84,32 @@ except Exception as e:
 ## Configuration
 
 The LLM configuration is managed via a YAML file. See `src/nikhil/vak/domain/llm_factory/example/config/llm_config.yaml` for a comprehensive example.
+
+### Example Configuration Snippet
+
+```yaml
+llm:
+  creative:
+    default: gpt
+    models:
+      gpt:
+        base_url: "http://localhost:1234/v1"
+        model: "lm_studio/openai/gpt-oss-20b"
+        api_key: "lm_studio"
+  evaluation:
+    default: gemma
+    models:
+      gemma:
+        base_url: "http://localhost:1234/v1"
+        model: "lm_studio/gemma-3-12b-it"
+        api_key: ""
+
+llm_parameters:
+  creative:
+    temperature: 0.8
+  evaluation:
+    temperature: 0.0
+```
 
 The configuration supports:
 - **Creative** and **Evaluation** use cases.
