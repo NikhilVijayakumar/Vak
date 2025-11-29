@@ -2,8 +2,8 @@
 # container.py
 from dependency_injector import containers, providers
 
-from nikhil.vak.domain.llm_factory.service.llm_builder import LLMBuilder
-from nikhil.vak.domain.llm_factory.settings.llm_settings import LLMSettings
+from nikhil.vak.llm_factory.service.llm_builder import LLMBuilder
+from nikhil.vak.llm_factory.settings.llm_settings import LLMSettings
 from nikhil.vak.utils.yaml_utils import YamlUtils
 
 

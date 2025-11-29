@@ -54,7 +54,7 @@ Vak's primary strength lies in its ability to abstract complex LLM setups into a
 Vak provides an `LLMContainer` to easily create LLM instances based on configuration. This uses dependency injection to provide pre-configured "creative" and "evaluation" LLMs.
 
 ```python
-from nikhil.vak.domain.llm_factory.dependency.llm_container import LLMContainer
+from nikhil.vak.llm_factory.dependency.llm_container import LLMContainer
 from pathlib import Path
 
 # Initialize the container

@@ -1,10 +1,10 @@
 # srcikhil/vak/domain/llm_factory/example/llm_example.py
 from pathlib import Path
 
-from nikhil.vak.domain.llm_factory.dependency.llm_container import LLMContainer
+from nikhil.vak.llm_factory.dependency.llm_container import LLMContainer
 # Import the container and the builder for type hinting
 
-from nikhil.vak.domain.llm_factory.service.llm_builder import LLMBuilder
+from nikhil.vak.llm_factory.service.llm_builder import LLMBuilder
 
 
 # The example runner functions remain the same.

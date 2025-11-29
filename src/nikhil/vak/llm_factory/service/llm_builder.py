@@ -2,10 +2,10 @@
 
 from crewai import LLM
 
-from nikhil.vak.domain.llm_factory.domain.llm_type import LLMType
-from nikhil.vak.domain.llm_factory.domain.models import LLMBuildResult
-from nikhil.vak.domain.llm_factory.settings.llm_settings import LLMSettings
-from nikhil.vak.domain.llm_factory.utils.llm_utils import LLMUtils
+from nikhil.vak.llm_factory.domain.llm_type import LLMType
+from nikhil.vak.llm_factory.domain.models import LLMBuildResult
+from nikhil.vak.llm_factory.settings.llm_settings import LLMSettings
+from nikhil.vak.llm_factory.utils.llm_utils import LLMUtils
 
 
 class LLMBuilder:
